@@ -73,20 +73,25 @@ console.log(
 //    that checks if the year is a leap year, and returns the correct
 //    number of days for Feb. The default value for the year should be
 //    the current year
-function daysInMonth(month) 
+function daysInMonth(month, year) 
 
 { if (month === 4 || month === 6 || month === 9 || month === 11)
 {
     return 30;}
 
-else if (month > 1 || month > 12) {
-    return ('Not a valid year');
-        
-}
-
+else if (month === 2 && year % 4 === 0)
+    return 28;
 else if (month === 2)
 {
     return 29;}
+
+
+else if (month < 1 || month > 12) {
+    return ('Not a valid year');
+            
+}
+
+
 
 else {
         
@@ -94,6 +99,8 @@ else {
 }
 
 console.log(daysInMonth(13));
+
+console.log(daysInMonth(2, 2024));
 
 console.log(`daysInMonth(2) === 29: ${daysInMonth(2) === 29}`);
 console.log(`daysInMonth(3) === 31: ${daysInMonth(3) === 31}`);
