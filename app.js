@@ -79,8 +79,9 @@ function daysInMonth(month, year)
 {
     return 30;}
 
-else if (month === 2 && year % 4 === 0)
-    return 28;
+else if (month === 2 && year % 4 === 0){
+    return 28;}
+
 else if (month === 2)
 {
     return 29;}
