@@ -79,6 +79,11 @@ function daysInMonth(month)
 {
     return 30;}
 
+else if (month > 1 || month > 12) {
+    return ('Not a valid year');
+        
+}
+
 else if (month === 2)
 {
     return 29;}
@@ -88,7 +93,7 @@ else {
     return 31;}
 }
 
-
+console.log(daysInMonth(13));
 
 console.log(`daysInMonth(2) === 29: ${daysInMonth(2) === 29}`);
 console.log(`daysInMonth(3) === 31: ${daysInMonth(3) === 31}`);
